@@ -1,0 +1,18 @@
+<%= form_for list do |f| %>
+  <% if list.errors.any? %>
+    <div class="alert alert-danger">
+      <ul>
+        <% todo_list.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :title %>
+    <%= f.text_field :title, class: 'form-control' %>
+  </div>
+
+  <%= f.submit class: 'btn btn-primary' %>
+<% end %>

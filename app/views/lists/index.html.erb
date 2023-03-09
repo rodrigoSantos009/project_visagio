@@ -1,0 +1,14 @@
+<div class="content">
+  <div class="lists">
+    <% @lists.each do |list| %>
+      <div class="list">
+        <h3><%= render list %></h3>
+        <p>
+          <%= link_to "Ver lista", list, class: "show-list" %>
+        </p>
+      </div>
+    <% end %>
+  </div>
+ 
+</div>
+

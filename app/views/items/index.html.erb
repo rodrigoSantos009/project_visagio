@@ -1,0 +1,23 @@
+<h1>Todo Items</h1>
+
+<%= link_to 'New Todo Item', new_list_item_path(@list), class: 'btn btn-primary' %>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Complete</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @items.each do |item| %>
+      <tr>
+        <td><%= item.title %></td>
+        <td><%= item.complete ? "Yes" : "No" %></td>
+        <td><%= link_to 'Edit', edit_list_item_path(@list, item), class: 'btn btn-secondary' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'Back to Lists', lists_path, class: 'btn btn-secondary' %>

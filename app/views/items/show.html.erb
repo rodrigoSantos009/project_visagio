@@ -1,0 +1,9 @@
+<h1><%= @item.title %></h1>
+
+<%= link_to 'Edit', edit_list_item_path(@list, @item), class: 'btn btn-secondary' %>
+
+<p>
+  Completed: <%= @item.complete ? 'Yes' : 'No' %>
+</p>
+
+<%= link_to 'Back to List', list_path(@list), class: 'btn btn-secondary' %>
