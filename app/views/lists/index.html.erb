@@ -1,15 +1,17 @@
 <div class="content">
   <div class="lists">
-    <% @lists.each do |list| %>
-      <div class="list">
-        <h3><%= render list %></h3>
-        <p><%= list.created_at.strftime("%F") %></p>
-        <p>
-          <%= link_to "Ver lista", list, class: "show-list" %>
-        </p>
-      </div>
+    <% if @lists.any? %>
+      <% @lists.each do |list| %>
+        <div class="list">
+          <h2><%= render list %></h2>
+          <p>
+            <%= link_to "Ver", list, class: "show-list" %>
+          </p>
+        </div>
+    <% end %>
+    <% else %>
+      <p class="empty-items">Ainda não há listas. <%= link_to 'Adicionar lista', new_list_path, class: '' %></p>
     <% end %>
   </div>
- 
 </div>
 

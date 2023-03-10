@@ -4,12 +4,12 @@
 
     <% if @list.items.any? %>
       <% @list.items.each do |item| %>
-        <p class="list-item"><%= item.title %></p>
+        <p class="list-item">*<%= item.title %></p>
     <% end %>
     <% else %>
       <p class="empty-items">Ainda não há itens. <%= link_to 'Add item', new_list_item_path(@list), class: 'link-add' %></p>
     <% end %>
-
+  
     <div class="list-items-links">
       <%= link_to 'Adicionar', new_list_item_path(@list), class: ' items-link back-link' %>
       <%= link_to 'Back', lists_path, class: ' items-link back-link' %>
