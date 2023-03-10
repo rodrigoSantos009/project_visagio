@@ -3,12 +3,17 @@
 
   <div class="">
     <ul class="navbar">
+    <% if user_signed_in? %>
       <li class="nav-item">
         <%= link_to 'Todo List', lists_path, class: 'nav-link' %>
       </li>
       <li class="nav-item">
         <%= link_to 'Novo Todo List', new_list_path, class: 'nav-link' %>
       </li>
+      <li class="">
+        <%= button_to 'Sair', destroy_user_session_path, method: :delete, class: 'btn-logout' %>
+      </li>
+    <% end %>
     </ul>
   </div>
 </nav>

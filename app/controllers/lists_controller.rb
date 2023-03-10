@@ -1,9 +1,10 @@
 # app/controllers/todo_lists_controller.rb
 class ListsController < ApplicationController
   before_action :set_list, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, execept: [:index, :show]
 
   def index
-    @lists = List.all
+    @lists = current_user.lists
   end
 
   def show
@@ -11,14 +12,14 @@ class ListsController < ApplicationController
   end
 
   def new
-    @list = List.new
+    @list = current_user.lists.new
   end
 
   def edit
   end
 
   def create
-    @list = List.new(list_params)
+    @list = current_user.lists.new(list_params)
     if @list.save
       redirect_to @list
     else

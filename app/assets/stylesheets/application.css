@@ -4,7 +4,6 @@
   box-sizing: border-box;
 }
 
-
 .nav {
   display: flex;
   justify-content: space-around;
@@ -17,7 +16,6 @@
 .navbar {
   display: flex;
   list-style: none;
-  
 }
 
 .nav-item:first-child {
@@ -44,7 +42,10 @@
 
 .main {
   width: 100vw;
-  height: 100vh;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
  .content {
@@ -218,3 +219,27 @@ h2 {
   text-decoration: none;
   border-radius: 5px;
 } 
+
+
+/* users */
+
+.btn-logout {
+  background-color: #FF7A48;
+  color: white;
+  border: none;
+  outline: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.user-form {
+  width: 350px;
+  height: 300px;
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
