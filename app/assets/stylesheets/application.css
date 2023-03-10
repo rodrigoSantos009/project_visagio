@@ -111,17 +111,109 @@ h3 {
   padding: 10px;
   width: 600px;
   height: auto;
-  border: 1px solid red;
-  border-radius: 10px ;
-  background-color: #FF7A48;
-  color: white;
 }
 
 .list-title {
+  color: #151F30;
   text-align: center;
   margin-bottom: 10px;
 }
 
 .list-item {
-  font-size: 2rem;
+  text-align: center;
+  font-size: 1.4rem;
 }
+
+.list-items-links {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.items-link {
+  width: 100px;
+  height: 30px;
+  padding: 10px;
+  line-height: 50%;
+  text-align: center;
+  background-color: #0593A2;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.empty-items {
+  text-align: center;
+}
+
+.form {
+  margin-bottom: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  padding: 10px;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.form-control-title {
+  font-size: 1.4rem;
+  color: #151F30;
+}
+
+.form-control-input {
+  outline: none;
+  padding: 5px;
+}
+
+.btn-form {
+  margin-top: 10px;
+  height: 30px;
+  padding: 10px;
+  line-height: 50%;
+  text-align: center;
+  background-color: #0593A2;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+}
+
+.new {
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.new-card {
+  padding: 10px;
+  width: 500px;
+  height: auto;
+}
+
+.new-title {
+  text-align: center;
+  color: #151F30;
+}
+
+.link-back {
+  text-align: center;
+}
+
+.new-back {
+  height: 30px;
+  padding: 10px;
+  line-height: 50%;
+  text-align: center;
+  background-color: #103778;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+} 

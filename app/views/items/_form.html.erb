@@ -1,23 +1,9 @@
-<%= form_for [@list, @item] do |f| %>
-  <% if @item.errors.any? %>
-    <div class="alert alert-danger">
-      <ul>
-        <% @item.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
+<div class="form">
+  <%= form_for [@list, @item] do |f| %>
+    <div class="form-group">
+      <%= f.label :title, class: "form-control-title" %>
+      <%= f.text_field :title, placeholder: 'digite um item...', class: 'form-control-input' %>
+      <%= f.submit class: 'btn-form' %>
     </div>
   <% end %>
-
-  <div class="form-group">
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :complete %>
-    <%= f.check_box :complete %>
-  </div>
-
-  <%= f.submit class: 'btn btn-primary' %>
-<% end %>
+</div>

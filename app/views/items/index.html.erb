@@ -13,8 +13,6 @@
     <% @items.each do |item| %>
       <tr>
         <td><%= item.title %></td>
-        <td><%= item.complete ? "Yes" : "No" %></td>
-        <td><%= link_to 'Edit', edit_list_item_path(@list, item), class: 'btn btn-secondary' %></td>
       </tr>
     <% end %>
   </tbody>

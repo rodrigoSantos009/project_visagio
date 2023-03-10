@@ -1,5 +1,12 @@
-<h1>New Todo Item</h1>
+<div class="new">
+  <div class="new-card">
+    <h1 class="new-title">Novo item</h1>
 
-<%= render 'form' %>
+    <%= render "form" %>
 
-<%= link_to 'Back', list_path(@list) %>
+    <div class="link-back">
+      <%= link_to "Voltar", @list, class:'new-back' %>
+    </div>
+  </div>
+</div>
+

@@ -20,7 +20,7 @@ class ItemsController < ApplicationController
   def create
     @item = @list.items.new(item_params)
     if @item.save
-      redirect_to list_items_path(@list)
+      redirect_to list_path(@list)
     else
       render :new
     end
