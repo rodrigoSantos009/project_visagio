@@ -5,12 +5,12 @@
         <div class="list">
           <h2><%= render list %></h2>
           <p>
-            <%= link_to "Ver", list, class: "show-list" %>
+            <%= link_to "Ver lista", list, class: "show-list" %>
           </p>
         </div>
     <% end %>
     <% else %>
-      <p class="empty-items">Ainda não há listas. <%= link_to 'Adicionar lista', new_list_path, class: '' %></p>
+      <p class="empty-items">Ainda não há listas. <%= link_to 'Adicionar lista', new_list_path %></p>
     <% end %>
   </div>
 </div>

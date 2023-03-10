@@ -1,11 +1,8 @@
-<div class="new">
-  <div class="new-card">
-    <h1 class="new-title">Nova lista</h1>
-
+<div class="new-card">
+  <h2 class="new-title">Nova lista</h2>
+  <div class="new-form">
     <%= render "form", list: @list %>
-
-    <div class="link-back">
-      <%= link_to "Voltar", lists_path, class:'new-back' %>
-    </div>
   </div>
+  <%= link_to "Voltar", lists_path, style: "color: #151F30; font-size: 1.2rem"  %>
 </div>
+

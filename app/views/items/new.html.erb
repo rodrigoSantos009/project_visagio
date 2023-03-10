@@ -1,12 +1,7 @@
-<div class="new">
-  <div class="new-card">
-    <h1 class="new-title">Novo item</h1>
-
-    <%= render "form" %>
-
-    <div class="link-back">
-      <%= link_to "Voltar", @list, class:'new-back' %>
+<div class="new-card">
+  <h1 class="new-title">Novo item</h1>
+    <div class="new-form">
+      <%= render "form" %>
     </div>
-  </div>
+  <%= link_to "Voltar", @list, style: "color: #151F30; font-size: 1.2rem" %>
 </div>
-

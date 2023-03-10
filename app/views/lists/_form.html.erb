@@ -1,9 +1,11 @@
-<div class="form">
-  <%= form_for list do |f| %>
-    <div class="form-group">
-      <%= f.label :title, class: "form-control-title" %>
-      <%= f.text_field :title, placeholder: 'digite uma lista...', class: 'form-control-input' %>
-      <%= f.submit class: 'btn-form' %>
+<%= form_for list do |f| %>
+  <div class="form-group">
+    <div>
+      <%= f.text_field :title, placeholder: 'digite uma lista...', class: 'form-control title-input' %>
     </div>
-  <% end %>
-</div>
+    <div>
+      <%= f.submit "Criar Lista", class: 'form-control btn-login' %>
+    </div>
+  </div>
+<% end %>
+

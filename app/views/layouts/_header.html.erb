@@ -1,19 +1,16 @@
-<nav class="nav">
-  <%= link_to 'My Lists', root_path, class: 'title' %>
-
-  <div class="">
-    <ul class="navbar">
-    <% if user_signed_in? %>
-      <li class="nav-item">
-        <%= link_to 'Todo List', lists_path, class: 'nav-link' %>
-      </li>
-      <li class="nav-item">
-        <%= link_to 'Novo Todo List', new_list_path, class: 'nav-link' %>
-      </li>
-      <li class="">
-        <%= button_to 'Sair', destroy_user_session_path, method: :delete, class: 'btn-logout' %>
-      </li>
-    <% end %>
-    </ul>
-  </div>
-</nav>
+<%if user_signed_in? %>
+  <nav class="nav">
+    <%= link_to 'My Lists', root_path, class: 'title' %>
+    <div class="">
+      <ul class="navbar">
+        <% if user_signed_in? %>
+          <% if @list %>
+            <%= link_to 'Listas', lists_path, class: 'nav-link' %>
+          <% end %>
+          <%= link_to 'Nova Lista', new_list_path, class: 'nav-link' %>
+          <%= button_to 'Sair', destroy_user_session_path, method: :delete, class: 'btn-logout' %>
+        <% end %>
+      </ul>
+    </div>
+  </nav>
+<% end %>
