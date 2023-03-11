@@ -4,9 +4,12 @@
       <% @lists.each do |list| %>
         <div class="list">
           <h2><%= render list %></h2>
-          <p>
+          <div class="lists-footer">
             <%= link_to "Ver lista", list, class: "show-list" %>
-          </p>
+            <% if !list.items.any? %>
+              <%= button_to 'Deletar', list_path(list), method: :delete, class: "del-list-btn" %>
+            <% end %>
+          </div>
         </div>
     <% end %>
     <% else %>
